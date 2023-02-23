@@ -21,6 +21,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("io.github.microutils:kotlin-logging:3.0.5")
+	implementation("io.micrometer:micrometer-core:1.10.4")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
