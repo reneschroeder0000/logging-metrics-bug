@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- configuration for development -->
+    <springProfile name="default | test">
+        <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>DEFAULT: ${CONSOLE_LOG_PATTERN}</pattern>
+                <charset>utf8</charset>
+            </encoder>
+            <filter class="com.example.loggingmetricsbug.CustomEventFilter"/>
+        </appender>
+    </springProfile>
+
+    <root level="INFO">
+        <appender-ref ref="Console"/>
+    </root>
+</configuration>
